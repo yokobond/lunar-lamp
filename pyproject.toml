@@ -4,4 +4,16 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ipywidgets>=8.1.5",
+    "numpy>=2.2.1",
+    "pyvista[jupyter]>=0.44.2",
+    "rasterio>=1.4.3",
+    "tqdm>=4.67.1",
+    "trame>=3.7.6",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
