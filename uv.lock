@@ -712,6 +712,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "ipywidgets" },
     { name = "numpy" },
+    { name = "pymeshfix" },
     { name = "pyvista", extra = ["jupyter"] },
     { name = "rasterio" },
     { name = "tqdm" },
@@ -727,6 +728,7 @@ dev = [
 requires-dist = [
     { name = "ipywidgets", specifier = ">=8.1.5" },
     { name = "numpy", specifier = ">=2.2.1" },
+    { name = "pymeshfix", specifier = ">=0.17.0" },
     { name = "pyvista", extras = ["jupyter"], specifier = ">=0.44.2" },
     { name = "rasterio", specifier = ">=1.4.3" },
     { name = "tqdm", specifier = ">=4.67.1" },
@@ -1360,6 +1362,22 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f", size = 4968581 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293 },
+]
+
+[[package]]
+name = "pymeshfix"
+version = "0.17.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pyvista" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f5/13/85fd4145af2e1e9c03194512309e0a631afc826396b11860c831171a37e0/pymeshfix-0.17.0.tar.gz", hash = "sha256:ce809a1741aaf670a3df98cf6aaba15881223bd7230928effc021395455397c9", size = 1502310 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f0/98/c7d6b965e776030063e5ee051ba55ed2fefa8222a2e4f89107913c08f589/pymeshfix-0.17.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:a7218bc3bb7bc87a7d7335ad0b0dcd376ce6f993980d4bd244365175d73ea8ea", size = 1459739 },
+    { url = "https://files.pythonhosted.org/packages/aa/e8/98ad3f3310aa94ce334211054a4e9fe8e21877b39bca0db5942adfdbdd0a/pymeshfix-0.17.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5bfc96dadd774591394451ad2855d3d5b2771e7dfd85a0ca9cbd47a968f8ed1f", size = 1443411 },
+    { url = "https://files.pythonhosted.org/packages/a0/32/023c0869f7056ce9f578308322722f25a2dc57a38430283bfc2b101a4bcb/pymeshfix-0.17.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0a5215bda194e53c7b909a11313f2a2b6086c87e3e3f9ad26bfe016e9da45dab", size = 2558520 },
+    { url = "https://files.pythonhosted.org/packages/04/40/999e52f51b96ad580786e193073f1b96cf0e92bc06a444eb529022a7989c/pymeshfix-0.17.0-cp312-cp312-win_amd64.whl", hash = "sha256:575bde851ab93642176a55f31c1e8c9611fc2ed43601cac4f3a028b8530f7075", size = 1364167 },
 ]
 
 [[package]]
