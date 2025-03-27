@@ -1,7 +1,7 @@
 [project]
-name = "jupyter-luna"
+name = "luna-lamp"
 version = "0.1.0"
-description = "Add your description here"
+description = "3D printing moon lamp based on real lunar data"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
