@@ -1,32 +1,34 @@
-# 月面3Dモデル作成ツール
+# Lunar 3D Model and Lamp Design
 
-このプロジェクトでは、NASA提供の月面標高データを使用して3Dプリンタブルな月面モデルを作成するJupyter Notebookを提供しています。
+NASA提供の月面標高と色の観測データを使用して3Dプリンタブルな月面モデルを作成するJupyter Notebookです。
+表面にはリアルな月面のクレーターを再現し、内部の厚さを調整することで月面の色を表現したランプをデザインします。
 
 ## 概要
+### 月面の3Dモデルのデザイン
 
-`lunar-surface.ipynb` は、以下の機能を実装したJupyter Notebookです：
+`lunar-surface.ipynb` は、月面のクレーターをリアルデータから忠実に3Dプリントするための Jupyter Notebook です：
 
-- NASA/USGSが公開している[月の高解像度標高データ](https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m)のダウンロードと処理
+- NASA/USGSが公開している[月の高解像度標高データ](https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m) をダウンロード
 - 月の標高データを3D球体モデルにマッピング
 - 地形の強調表示による視覚的効果の向上
 - メッシュの最適化と間引きによる3Dプリント用データの準備
 - 中空シェルモデルの作成によるプリント材料の節約
 - STLファイル出力
 
-## 必要なライブラリ
+### 月面ランプのデザイン
 
-このノートブックを実行するには以下のライブラリが必要です：
+`lunar-lamp.ipynb` は、月面3DモデルをランプとしてデザインするためのJupyter Notebookです：
 
-- rasterio
-- pyvista
-- numpy
-- tqdm
+- NASAがScientific Visualization Studioで公開している月面の色データ [CGI Moon Kit](https://svs.gsfc.nasa.gov/4720/) をダウンロード
+- 表面に月のクレーターによる凹凸を追加
+- 内側の厚さの変化で内部からの光を調整して月面の色を表現
+- STLファイル出力
 
 ## 使用方法
 
 1. このリポジトリをクローンまたはダウンロードします
 2. 必要なライブラリをインストールします
-3. Jupyter Notebookを起動して `lunar-surface.ipynb` を開きます
+3. Jupyter Notebookを起動して、リポジトリのノートブックを開きます
 4. セルを順に実行します
 
 ## 注意点
