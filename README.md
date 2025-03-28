@@ -45,3 +45,18 @@ NASA提供の月面標高と色の観測データを使用して3Dプリンタ�
 - PyVista：3Dメッシュ操作と可視化
 - 球面座標変換：標高データを球体表面にマッピング
 - メッシュ間引きアルゴリズム：3Dプリント用の最適化
+
+
+## 3Dプリント設定
+
+出力済みのSTLファイルを3Dプリントするための設定例を以下に示します:
+- メッシュファイル: `model/lunar_lamp.stl`
+
+### Bambu Studio
+
+3Dプリントをするときに設定すると良い項目は以下の通りです：
+
+- Wall generator: Arachne
+- Top surface pattern: Archimedean Chords
+
+Bambu Studio 設定例: `model/lunar_lamp.3mf`
