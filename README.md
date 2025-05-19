@@ -24,6 +24,15 @@ NASA提供の月面標高と色の観測データを使用して3Dプリンタ�
 - 内側の厚さの変化で内部からの光を調整して月面の色を表現
 - STLファイル出力
 
+内部にLEDを入れる穴は開けていないので、Blenderなどで開けます。
+
+- 穴の空いたBlenderファイル: `model/lunar-lamp-print.blend`
+
+- [Blender](https://www.blender.org/) での穴あけ方法
+  - 月のSTLファイルをインポート
+  - 月のモデルの穴を開けたいところにcylinderを追加して、BooleanでUnionを選択
+  - cylinderの内側に小さいcylinderを追加して、月とBooleanでDifferenceにする(穴になる)
+
 ## 使用方法
 
 1. このリポジトリをクローンまたはダウンロードします
@@ -39,18 +48,17 @@ NASA提供の月面標高と色の観測データを使用して3Dプリンタ�
 
 ## 技術的詳細
 
-このノートブックでは以下の技術を使用しています：
+このノートブックでは以下のライブラリを使用しています：
 
-- Rasterio：地理空間ラスターデータ処理
-- PyVista：3Dメッシュ操作と可視化
-- 球面座標変換：標高データを球体表面にマッピング
-- メッシュ間引きアルゴリズム：3Dプリント用の最適化
+- [Rasterio](https://rasterio.readthedocs.io/)：地理空間ラスターデータ処理
+- [PyVista](https://www.pyvista.org/)：3Dメッシュ操作と可視化
 
 
 ## 3Dプリント設定
 
 出力済みのSTLファイルを3Dプリントするための設定例を以下に示します:
-- メッシュファイル: `model/lunar_lamp.stl`
+- 穴なしメッシュファイル: `model/lunar-lamp.stl`
+- 穴ありメッシュファイル: `model/lunar-lamp-print.stl`
 
 ### Bambu Studio
 
@@ -59,4 +67,4 @@ NASA提供の月面標高と色の観測データを使用して3Dプリンタ�
 - Wall generator: Arachne
 - Top surface pattern: Archimedean Chords
 
-Bambu Studio 設定例: `model/lunar_lamp.3mf`
+Bambu Studio 設定例: `model/lunar-lamp-print.3mf`
